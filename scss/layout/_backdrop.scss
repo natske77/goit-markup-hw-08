@@ -1,0 +1,230 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden .modal__container {
+    transform: scale(1);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+}
+
+/* -------modal------- */
+.modal__container {
+    padding: 40px;
+
+    width: 528px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--white-color);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1.1);
+    overflow: auto;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal__hero {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    color: var(--primary-text-color);
+}
+
+/* - - - form - - - */
+
+.form-field__label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: var(--secondary-text-color);
+}
+
+.form-text__label {
+    margin: 0;
+}
+
+.form-field__input {
+    padding: 0 42px 0;
+    height: 40px;
+    width: 100%;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field__input:focus,
+.form-field__input:hover {
+    border-color: var(--accent-color);
+}
+
+.form-field__input:focus+.form-field__icon,
+.form-field__input:hover+.form-field__icon {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__field {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-field__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.form-field__textarea {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    height: 120px;
+    width: 100%;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field__textarea:focus,
+.form-field__textarea:hover {
+    border-color: var(--accent-color);
+}
+
+.form-field__textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+/* ------checkbox------ */
+.checkbox {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 12px;
+}
+
+.checkbox__link-rools {
+    color: var(--accent-color);
+}
+
+.checkbox__input {
+    appearance: none;
+}
+
+.checkbox__label {
+    position: relative;
+    padding-left: 24px;
+}
+
+.checkbox__icon {
+    position: absolute;
+    fill: transparent;
+
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox__input:checked+.checkbox__icon {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    fill: var(--white-color);
+}
+
+/* submit button */
+.submit__button {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 52px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms;
+}
+
+.submit__button:hover,
+.submit__button:focus {
+    background-color: var(--custom-background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* modal close button */
+.modal__close-button {
+    padding: 0;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close-button:focus,
+.modal__close-button:hover {
+    fill: var(--accent-color);
+}

@@ -1,0 +1,28 @@
+// utils
+@import './utils/fonts';
+@import './utils/variables';
+
+
+
+// base
+@import './base/base';
+@import './base/reset';
+
+
+
+// components
+@import './components/buttons';
+
+
+
+// layout
+@import './layout/container';
+@import './layout/header';
+@import './layout/hero-section';
+@import './layout/features-section';
+@import './layout/activity-section';
+@import './layout/team-section';
+@import './layout/clients-section';
+@import './layout/footer';
+@import './layout/projects-container';
+@import './layout/backdrop';
