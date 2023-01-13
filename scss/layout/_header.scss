@@ -1,7 +1,7 @@
 .header {
     border-bottom: 1px solid #ececec;
 
-&__container {
+        &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -58,6 +58,9 @@
         &__link {
         padding: 32px 0;
         color: var(--primary-text-color);
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
 
         &__link--current {
@@ -103,6 +106,10 @@
         text-decoration: none;
         color: var(--secondary-text-color);
         fill: var(--secondary-text-color);
+
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
 
         &__contacts-icon {
@@ -113,6 +120,19 @@
         &__contacts-link:focus {
         color: var(--accent-color);
         fill: var(--accent-color);
+    }
+
+    /*burger*/
+    &__burger {
+        padding: 32px 0;
+        border: none;
+        background-color: var(--white-color);
+
+        display: none;
+
+        @media (max-width: 480px){
+            display: block;
+        }
     }
 
 }
