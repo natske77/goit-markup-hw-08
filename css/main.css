@@ -296,7 +296,7 @@ p {
   fill: var(--accent-color);
 }
 .header__burger {
-  padding: 32px 0;
+  padding: 22px 0;
   border: none;
   background-color: var(--white-color);
 }
@@ -314,7 +314,7 @@ p {
   text-align: center;
   background-color: var(--blocks-background-color);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-pic.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-pic.jpg");
