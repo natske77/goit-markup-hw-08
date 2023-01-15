@@ -362,7 +362,6 @@ p {
 .hero__title {
   margin: 0 auto;
   margin-bottom: 40px;
-  max-width: 696px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
@@ -839,7 +838,8 @@ p {
 /* -------modal------- */
 .modal__container {
   padding: 40px;
-  width: 528px;
+  width: 450px;
+  height: 609px;
   max-width: 100%;
   max-height: 100%;
   background-color: var(--white-color);
@@ -854,14 +854,28 @@ p {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+@media (min-width: 768px) {
+  .modal__container {
+    width: 528px;
+  }
+}
 
 .modal__hero {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--primary-text-color);
+}
+@media (min-width: 768px) {
+  .modal__hero {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 /* - - - form - - - */
@@ -1000,6 +1014,16 @@ textarea {
 .checkbox__label {
   position: relative;
   padding-left: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+}
+@media (min-width: 768px) {
+  .checkbox__label {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox__icon {
