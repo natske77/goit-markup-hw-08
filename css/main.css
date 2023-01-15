@@ -46,7 +46,7 @@ p {
 
 /* hero button */
 .hero__button {
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -159,9 +159,23 @@ p {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .header {
@@ -181,14 +195,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-@media (max-width: 479px) {
-  .header__container {
-    width: 480px;
-  }
 }
 .header__link {
   height: 80px;
@@ -231,12 +237,13 @@ p {
   list-style-type: none;
 }
 .header__link {
+  display: none;
   padding: 32px 0;
   color: var(--primary-text-color);
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .header__link {
-    display: none;
+    display: block;
   }
 }
 .header__link--current {
@@ -259,33 +266,59 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+@media (min-width: 768px) {
+  .header__list:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .header__list:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
 }
 .header__contacts-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.17;
-  text-decoration: none;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 32px 0;
-  text-decoration: none;
-  color: var(--secondary-text-color);
-  fill: var(--secondary-text-color);
+  display: none;
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .header__contacts-link {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.17;
+    text-decoration: none;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 32px 0;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header__contacts-link {
+    display: contents;
   }
 }
 .header__contacts-icon {
@@ -297,13 +330,18 @@ p {
 }
 .header__burger {
   padding: 22px 0;
+  cursor: pointer;
   border: none;
   background-color: var(--white-color);
+  fill: var(--primary-text-color);
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .header__burger {
     display: none;
   }
+}
+.header__burger:hover {
+  fill: var(--accent-color);
 }
 
 .hero {
@@ -321,14 +359,21 @@ p {
 }
 .hero__title {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   max-width: 696px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--white-color);
+}
+@media (min-width: 768px) {
+  .hero__title {
+    margin-bottom: 30px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .features__title {
@@ -1030,4 +1075,18 @@ textarea {
 .modal__close-button:focus,
 .modal__close-button:hover {
   fill: var(--accent-color);
+}
+
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  display: none;
+}
+
+.mobile__menu.is-open {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

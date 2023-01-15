@@ -5,14 +5,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-
-        @media (max-width: 479px) {
-            width: 480px;
-        }
     }
 
         &__link {
@@ -60,11 +52,13 @@
     }
 
         &__link {
+        display: none;
+
+        @media (min-width:768px) {
+                display: block;
+            }
         padding: 32px 0;
         color: var(--primary-text-color);
-        @media (max-width: 480px) {
-            display: none;
-        }
     }
 
         &__link--current {
@@ -88,12 +82,30 @@
 
     /*header__contacts*/
         &__contacts {
+            @media (min-width: 768px) and (max-width: 1199px) {
+                flex-direction: column;
+                align-items: baseline;
+            }
+
         display: flex;
-        gap: 50px;
         align-items: center;
     }
 
+    &__list:not(:last-child) {
+        @media (min-width: 768px) {
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 1200px) {
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
+    }
+
         &__contacts-link {
+            display: none;
+            @media (min-width:768px) {
+                
         display: flex;
         align-items: center;
 
@@ -110,10 +122,10 @@
         text-decoration: none;
         color: var(--secondary-text-color);
         fill: var(--secondary-text-color);
-
-        @media (max-width: 480px) {
-            display: none;
-        }
+            }
+            @media (min-width: 768px) and (max-width: 1199px) {
+                display: contents;
+            }
     }
 
         &__contacts-icon {
@@ -128,15 +140,19 @@
 
     /*burger*/
     &__burger {
-        padding: 22px 0 ;
+        padding: 22px 0;
+        cursor: pointer;
         border: none;
         background-color: var(--white-color);
-
-
-        @media (min-width: 480px){
+        fill: var(--primary-text-color);
+        
+        @media (min-width: 768px){
             display: none;
         }
     }
 
-}
+        &__burger:hover {
+            fill: var(--accent-color);
+        }
 
+}
