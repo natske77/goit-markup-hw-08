@@ -3,13 +3,26 @@
     background-color: var(--blocks-background-color);
 
     &__container {
-        display: flex;
+
+
+        @media (min-width: 768px) {
+            display: flex;
         align-items: baseline;
+        }
+    }
+
+    &-content {
+        
+        margin-right: 70px;
+        display: flex;
+        flex-direction: column;
+        width: 231px;
     }
 
     /*logo footer*/
     &__logo {
         display: inline-block;
+        text-align: center;
         margin-bottom: 20px;
         font-family: "Raleway", sens-serif;
         font-size: 26px;
@@ -17,6 +30,11 @@
         line-height: 1.17;
         color: var(--white-color);
         text-decoration: none;
+
+
+        @media (min-width: 768px) {
+        text-align: left;
+        }
     }
 
     &__logo>span {
@@ -25,12 +43,16 @@
 
     /*address*/
     & address {
+        text-align: center;
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__text {
@@ -39,6 +61,8 @@
     }
 
     /* contacts list */
+    
+
     &__link {
         color: rgba(255, 255, 255, 0.6);
         text-decoration: none;
@@ -59,23 +83,24 @@
         margin-bottom: 9px;
     }
 
-    &-content {
-        margin-right: 70px;
-        display: flex;
-        flex-direction: column;
-        width: 231px;
-    }
 
     &__social-media {
         display: flex;
         flex-direction: column;
 
         margin-right: 93px;
+
+        
     }
 
     &__media-text {
+        text-align: c;
         margin-bottom: 20px;
         color: var(--white-color);
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__social-media-list {

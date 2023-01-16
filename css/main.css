@@ -587,16 +587,30 @@ p {
   /*address*/
   /* contacts list */
 }
-.footer__container {
+@media (min-width: 768px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+.footer-content {
+  margin-right: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 231px;
 }
 .footer__logo {
   display: inline-block;
+  text-align: center;
   margin-bottom: 20px;
   font-family: "Raleway", sens-serif;
   font-size: 26px;
@@ -605,16 +619,27 @@ p {
   color: var(--white-color);
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  .footer__logo {
+    text-align: left;
+  }
+}
 .footer__logo > span {
   color: var(--accent-color);
 }
 .footer address {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+@media (min-width: 768px) {
+  .footer address {
+    text-align: left;
+  }
 }
 .footer__text {
   margin-bottom: 9px;
@@ -635,17 +660,6 @@ p {
 .footer__link-list:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-content {
-  margin-right: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 231px;
-}
 .footer__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,8 +671,14 @@ p {
   margin-right: 93px;
 }
 .footer__media-text {
+  text-align: c;
   margin-bottom: 20px;
   color: var(--white-color);
+}
+@media (min-width: 768px) {
+  .footer__media-text {
+    text-align: left;
+  }
 }
 .footer__social-media-list {
   display: -webkit-box;

@@ -19,6 +19,7 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        
     }
 
     &__icons {
@@ -32,5 +33,7 @@
         border-radius: 4px;
 
         background-color: var(--secondary-background-color);
+    
     }
 }
+
