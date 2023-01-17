@@ -31,7 +31,7 @@
 /* footer button */
 .footer__button {
     position: relative;
-    left: 12px;
+    left: 10px;
     padding: 10px 0;
 
     font-weight: 700;
@@ -50,6 +50,13 @@
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms;
+
+        @media (max-width: 1199px) {
+            left: 0;
+            width: 200px;
+            margin-top: 20px;
+
+        }
 }
 
 .footer__button:hover,
@@ -60,7 +67,7 @@
 
 .footer__button-text {
     padding-left: 28px;
-    padding-right: 68px;
+    padding-right: 62px;
     margin: 0;
 }
 
