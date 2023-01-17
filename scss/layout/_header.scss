@@ -33,11 +33,16 @@
         line-height: 1.17;
         color: var(--black-color);
         text-decoration: none;
+
+        @media (max-width: 768px) {
+            margin: 0;
+        }
     }
 
         &__logo>span {
         color: var(--accent-color);
     }
+    
 
     /*navigation*/
         &__nav {

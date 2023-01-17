@@ -17,24 +17,22 @@
             rgba(47, 48, 58, 0.4)),
         url("../images/hero-pic.jpg");
 
-        &__title {
-                margin: 0 auto;
-                margin-bottom: 40px;
-        
-                font-weight: 900;
-                font-size: 26px;
-                line-height: 1.61;
-                
-                letter-spacing: 0.06em;
-                text-align: center;
-                color: var(--white-color);
 
-                @media (min-width: 768px) {
-                    margin-bottom: 30px;
+        &__title {
+            margin: 0 auto;
+            margin-bottom: 40px;
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 1.61;
+            
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            text-align: center;
+            color: var(--white-color);
+
+                @media (min-width: 1200px) {
                     font-size: 44px;
                     line-height: 1.36;
-                    
                 }
             }
 }
-

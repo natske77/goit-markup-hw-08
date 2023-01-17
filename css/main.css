@@ -225,6 +225,11 @@ p {
   color: var(--black-color);
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .header__logo {
+    margin: 0;
+  }
+}
 .header__logo > span {
   color: var(--accent-color);
 }
@@ -372,13 +377,13 @@ p {
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
+  text-transform: uppercase;
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--white-color);
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .hero__title {
-    margin-bottom: 30px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -853,14 +858,13 @@ p {
   bottom: 13px;
   fill: var(--white-color);
 }
-
-form {
+.footer__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 1199px) {
-  form {
+  .footer__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

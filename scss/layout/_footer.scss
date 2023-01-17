@@ -181,15 +181,13 @@
         fill: var(--white-color);
     }
 
-}
-
-form {
-    display: flex;
-
-    @media (max-width: 1199px) {
-        flex-direction: column;
-        align-items: center;
-    }
+    &__form {
+        display: flex;
     
-}
+        @media (max-width: 1199px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
+    }
+}
