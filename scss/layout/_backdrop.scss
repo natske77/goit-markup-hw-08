@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
@@ -12,7 +12,8 @@
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media (max-width: 480px) {
-        width: 450px;
+        // width: 320px;
+        width: 100vw;
     }
 }
 
@@ -48,11 +49,16 @@
     @media (min-width: 768px) {
         width: 528px;    
     }
+
+    @media (max-width: 480px) {
+        width: 320px;    
+    }
 }
 
 
 .modal__hero {
     margin-bottom: 12px;
+    
 
     font-weight: 700;
     font-size: 20px;
@@ -60,14 +66,18 @@
     letter-spacing: 0.03em;
     text-align: center;
 
-    color: var(--primary-text-color);
+    color: var(--primary-text-color);   
+    
+    @media (max-width: 1199px) {
+        margin: 0 auto 12px;
+        // width: 370px;
+        width: 100%;
+    }
 
-    @media (min-width: 768px) {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.15;
-        letter-spacing: 0.03em;
-        
+    @media (max-width: 480px) {
+        font-size: 16px;
+        margin: 0 auto 12px;
+        width: 100%;
     }
 }
 
@@ -183,6 +193,11 @@ textarea {
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 0.03em;        
+    }
+
+    @media (max-width: 480px) {
+        font-size: 10px;
+        width: 100%;
     }
 }
 
