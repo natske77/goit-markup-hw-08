@@ -330,6 +330,7 @@ p {
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .header__contacts-link {
+    font-size: 12px;
     display: contents;
   }
 }
